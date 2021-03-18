@@ -13,7 +13,7 @@ var admins = [
     { name: 'Adam', surname: 'Terry', age: 24, role: 'admin' },
 ];
 function logPerson(person) {
-    console.log(" ${person.name} ${person.surname}, ${person.age}, ${person.role} ");
+    console.log(" " + person.name + " " + person.surname + ", " + person.age + ", " + person.role + " ");
 }
 function filterPersons(persons, criteria) {
     return persons.filter(function (person) {

@@ -17,7 +17,7 @@ interface Person {
     ]
     
     function logPerson(person: Person) {
-        console.log(" ${person.name} ${person.surname}, ${person.age}, ${person.role} ");
+        console.log(` ${person.name} ${person.surname}, ${person.age}, ${person.role} `);
     }
     
     function filterPersons(persons: Person[], criteria: any): Person[] {
