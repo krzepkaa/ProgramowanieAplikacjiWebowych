@@ -16,11 +16,8 @@ function logPerson(person) {
     console.log(" " + person.name + " " + person.surname + ", " + person.age + ", " + person.role + " ");
 }
 function filterPersons(persons, criteria) {
-    return persons.filter(function (person) {
-        Object.keys(criteria).every(function (key) {
-            person[key] === criteria[key];
-        });
-    });
+    var keys = Object.keys(criteria);
+    return persons.filter(function (person) { return keys.some(function (key) { return person[key] == criteria[key]; }); });
 }
 // TODO:
 // 1. Przy pomocy funkcji logPerson wypisać osoby z tablicy users i admins (patrz foreach)

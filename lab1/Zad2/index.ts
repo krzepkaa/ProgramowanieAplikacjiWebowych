@@ -21,11 +21,8 @@ interface Person {
     }
     
     function filterPersons(persons: Person[], criteria: any): Person[] {
-        return persons.filter((person)=>{
-            Object.keys(criteria).every((key) =>{
-                person[key] === criteria[key];
-            })
-        })
+        const keys = Object.keys(criteria);
+        return persons.filter((person) => keys.some((key) => person[key] == criteria[key]));
     }
     
     // TODO:
