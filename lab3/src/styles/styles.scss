@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+//game styles
+@import "games/TicTacToe";
+#game-box {
+  @include box-shadow;
+  @include game-box-size;
+  margin: auto;
+  position: relative;
+}
+
+* {
+  @include padding-margin-0;
+  @include poppins-font;
+}
+
+html {
+  &.light {
+    @import "themes/light";
+    @import "themesStyles";
+  }
+  &.default {
+    @import "themes/default";
+    @import "themesStyles";
+  }
+}
+
+.copyright {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 0.8rem;
+}
